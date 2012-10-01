@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Faulty iPhones</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<style type="text/css">
+  html {
+  background: url("http://rainydayinteractive.net/images/bgpat3.jpg") repeat scroll 0 0 #E8E7E8;
+  font-family: sans-serif;
+  }
+  h1 {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    color: #222;
+  }
+  body{
+    width: 475px;
+    margin: 0 auto;
+  }
+  strong{
+    color: #222;
+  }
+  article.question {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 450px;
+    border: 2px dashed #999;
+  }
+  article.solution {
+    margin: 10px;
+  }
+</style>
+</head>
+<body>
+  <article class="question">
+    <h1>Question:</h1>
+    Exactly 3 factories are producing iPhones for sale in the US. <br/>
+    Factory 1 generates 100 phones per hour, with an
+    average of 6 faulty phones per 1000. <br/>
+    Factory 2 generates 400 phones per hour with an average of 1 faulty phone
+    per 1000. <br/>
+    Factory 3 generates 1000 phones per hour, with 2 faults per 1000. <br/>
+    What is the probability that the phone sold in a shop is faulty?
+  </article>
+  <article class="solution">
+    <header>
+      This problems can be solved by using the <br/><strong>Law of Total Probability and Bayes Theorem</strong>
+    </header>
+     <br/>
+      Where $P =$ Probability and $F =$ Factory,<br/><br/>
+      and $Bad|F_j =$ is the amount bad per factory,<br/><br/>
+      and $F_j =$ is the amount per factory,<br/><br/>
+      $P(Bad) = {\displaystyle{\sum_{j=1}^3 P(Bad|F_j) P(F_j)}}$<br/><br/>
+      $P(Bad|F_1) = \left( \frac{6}{1000} *  100/hr \right) + $<br/><br/>
+      $P(Bad|F_2) = \left( \frac{1}{1000} *  400/hr \right) + $<br/><br/>
+      $P(Bad|F_3) = \left( \frac{2}{1000} * 1000/hr \right) $<br/><br/>
+      $= \left( (.0006) \frac{100}{1500} \right) + \left( (.0001) \frac{400}{1500} \right) + \left( (.0002) \frac{1000}{1500} \right) $<br/><br/>
+      $= \frac{.6}{1500} + \frac{.4}{1500} + \frac{2}{1500}$<br/><br/>
+      $= \frac{3}{1500} = .002$<br/><br/>
+      $\therefore 0.2\%$ of all iPhones sold are faulty.<br/><br/>
+    <br/>
+    <br/>
+  </article>
+</body>
+</html>
